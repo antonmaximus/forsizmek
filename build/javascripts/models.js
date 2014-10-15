@@ -89,6 +89,7 @@ var CAROUSEL = (function(globals, prev) {
     leftChev.dataset.step = this.options.w;
     this.carousel.dataset.autoStep = -(this.options.w);
     this.carousel.dataset.time = this.options.time;
+    download.download = true;
 
     navigation.appendChild(leftChev);
     navigation.appendChild(rightChev);
@@ -137,6 +138,7 @@ var CAROUSEL = (function(globals, prev) {
       // Store img attributes and style
       img.src = elem.path;
       img.alt = elem.title;
+      img.title = elem.title;
       img.onload = function() {
         if (this.width/this.height >= self.options.resolution) { 
           this.style.width = '100%'; 
@@ -156,16 +158,18 @@ var CAROUSEL = (function(globals, prev) {
 
   // Identifies mouse  click on navigation and download links
   function carouselClickHandler(e) {
-    var className = e.target.className;
+    var target =  e.target || e.srcElement; //Firefox doesn't like srcElement
+    var className = target.className;
 
     if(className.indexOf('chevron') > -1) {
-      CAROUSELCONTROLLER.moveCarouselByStep(this, Number(e.srcElement.dataset.step));
+      CAROUSELCONTROLLER.moveCarouselByStep(this, Number(target.dataset.step));
       CAROUSELCONTROLLER.stopCarousel(this);
       CAROUSELCONTROLLER.autoMove(this);
     } else if (className.indexOf('download') > -1) {
-      CAROUSELCONTROLLER.downloadVisiblePhotoHandler(this, e.srcElement);
+      // e.preventDefault();
+      CAROUSELCONTROLLER.downloadVisiblePhotoHandler(this, target);
     } else if (className.indexOf('pause') > -1) {
-      CAROUSELCONTROLLER.pauseButtonHandler(this, e.srcElement);
+      CAROUSELCONTROLLER.pauseButtonHandler(this, target);
     }
   }
 

@@ -11,6 +11,10 @@
         {
             "path": "./images/imageC.jpg",
             "title": "image C"
+        },
+        {
+            "path": "./images/imageD.jpg",
+            "title": "image D"
         }
     ]
 }

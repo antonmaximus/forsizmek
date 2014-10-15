@@ -66,8 +66,9 @@ var CAROUSELCONTROLLER = (function(globals, prev) {
       index = Math.abs(marginLeft/carouselWidth),
       img = filmstrip.children[index].firstChild;
 
+    downloadLink.download = img.alt.trim().split(' ').join('_').split('\"').join('').split('\'').join('');
     downloadLink.href = img.src;
-    downloadLink.download = img.alt;
+    console.log(downloadLink.download);
   }
 
   function pauseButtonHandler (carousel) {
