@@ -21,8 +21,6 @@ var HELPERFUNCTIONS = (function(prev) {
       if (xhr.readyState === 4) { // request is done
         if (xhr.status === 200) { // successfully
           callback(JSON.parse(xhr.responseText));
-        } else if (xhr.status === 0) {
-          console.log('Local Request');
         } else {
           console.error(xhr);
         }
