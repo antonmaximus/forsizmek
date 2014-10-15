@@ -29,7 +29,7 @@ var HELPERFUNCTIONSFLICKR = (function(prev) {
 
     //clean items before creating carousel
     var cleanedItems = data.items.map(function(elem) {
-      return { path: elem.media.m, title: elem.title };
+      return { path: elem.media.m.replace('_m.jpg', '_z.jpg'), title: elem.title };
     });
 
     var callback = args[1];

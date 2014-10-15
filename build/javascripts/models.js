@@ -46,6 +46,7 @@ var CAROUSEL = (function(globals, prev) {
       time: Math.abs(input.tranTime) || 1800
     };
     this.options.resolution = this.options.w/this.options.h;
+    this.options.viewMode = this.options.w >= this.options.h ? 'landscape' : 'portrait';
 
 
     var self = this;
@@ -140,11 +141,20 @@ var CAROUSEL = (function(globals, prev) {
       img.alt = elem.title;
       img.title = elem.title;
       img.onload = function() {
-        if (this.width/this.height >= self.options.resolution) { 
-          this.style.width = '100%'; 
-          this.parentNode.style.lineHeight = self.options.h + 'px'; // To center img vertically
-        } else {
-          this.style.height = '100%';
+        if(self.options.viewMode == 'landscape') {
+          if (this.height >  self.options.h)  //If img height is taller than viewport height
+            this.style.height = '100%'; 
+          else 
+            this.parentNode.style.lineHeight = self.options.h + 'px';   
+        } 
+        else { //portrait
+          if(this.height >  self.options.h)  //If img height is taller than viewport height
+            this.style.height = '100%'; 
+          else {
+            this.parentNode.style.lineHeight = self.options.h + 'px';   
+            if (this.width > self.options.w) // If img is wider than viewport
+              this.style.width = '100%'; 
+          }
         }
       };
 

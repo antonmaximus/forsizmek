@@ -26,20 +26,20 @@ body_class: index
 %p 
   %b Support for User-configured Options 
   %br
-  User-configured options shown above are: viewing size (600x200), Background-color (black), &  Transition time (3000ms).
+  User-configured options shown above are: viewing size (600x200), Background-color (pink), &  Transition time (3000ms).
 
 #carouselC
 %p 
   %b Support for all Image Sizes and a Portrait Viewport.
   %br
-  Images above have different extreme sizes. Viewing size is 300x500. Background-color is green.
+  All image sizes are supported; and if the image is too small, its natural resolution is preserved. Viewing size is 300x500 (portrait). Background-color is of a green hue.
 
 
 #carouselD
 %p 
   %b Support for Flickr API using JSONP
   %br
-  Flickr API was used with the keyword 'dog' to fetch the images, and the data was in JSONP instead of JSON.
+  Flickr API was used with the keyword 'dog' to fetch the images, and the data was in JSONP instead of JSON.  Background-color is of a blue hue.
 
 
 / scripts
@@ -54,13 +54,13 @@ body_class: index
   var carousel = new CAROUSEL.Carousel({ divId: 'carouselA', jsonPath: './javascripts/jsonImages.json'});
 
   var inputTwo = { divId: 'carouselB', jsonPath: './javascripts/jsonImages.json', 
-    tranTime: 3000, width: 600, height: 200, backgroundColor: 'black'}
+    tranTime: 3000, width: 600, height: 200, backgroundColor: 'pink'}
   var carouselTwo = new CAROUSEL.Carousel(inputTwo);
 
 
   var inputC = { divId: 'carouselC', jsonPath: './javascripts/jsonImagesLettered.json', 
-     width: 300, height: 500, backgroundColor: 'green'}
+     width: 300, height: 500, backgroundColor: 'rgba(40, 200, 100, 0.55)'}
   var carouselC = new CAROUSEL.Carousel(inputC);
 
-  var inputD = { divId: 'carouselD', flickrTag: 'dog', backgroundColor: 'rgba(0, 100, 200, 0.25)'}
+  var inputD = { divId: 'carouselD', flickrTag: 'dog', backgroundColor: 'rgba(0, 100, 200, 0.25)', width: 640, height: 400}
   var carouselD = new CAROUSEL.Carousel(inputD);
