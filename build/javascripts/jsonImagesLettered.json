@@ -1,15 +1,15 @@
 {
     "items": [
         {
-            "path": "../images/imageA.jpg",
+            "path": "./images/imageA.jpg",
             "title": "image A"
         },
         {
-            "path": "../images/imageB.jpg",
+            "path": "./images/imageB.jpg",
             "title": "image B"
         },
         {
-            "path": "../images/imageC.jpg",
+            "path": "./images/imageC.jpg",
             "title": "image C"
         }
     ]

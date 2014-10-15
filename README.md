@@ -7,7 +7,7 @@ Just some JavaScript OOP
 
 **Author:** Anton
 
-**Demo:** [https://github.com/antonmaximus/forsizmek/build/index.html](https://github.com/antonmaximus/forsizmek/build/index.html)
+**Demo:** http://antonmaximus.github.io/forsizmek/build/
 
 **Description:**
 
