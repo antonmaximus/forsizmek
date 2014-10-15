@@ -69,7 +69,6 @@ var CAROUSELCONTROLLER = (function(globals, prev) {
 
     downloadLink.download = img.alt.trim().split(' ').join('_').split('\"').join('').split('\'').join('');
     downloadLink.href = img.src;
-    console.log(downloadLink.download);
   }
 
   function pauseButtonHandler (carousel) {
