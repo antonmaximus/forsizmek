@@ -1,0 +1,16 @@
+{
+    "items": [
+        {
+            "path": "../images/imageA.jpg",
+            "title": "image A"
+        },
+        {
+            "path": "../images/imageB.jpg",
+            "title": "image B"
+        },
+        {
+            "path": "../images/imageC.jpg",
+            "title": "image C"
+        }
+    ]
+}

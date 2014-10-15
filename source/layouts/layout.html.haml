@@ -1,0 +1,50 @@
+!!! 5
+%html{lang: 'en'}
+  %head
+    %title #{data.page.title || "Anton"}
+    %meta(http-equiv="content-type" content="text/html" charset="utf-8")
+    %meta(http-equiv="x-ua-compatible" content="ie=edge,chrome=1")
+    %meta(name="description" content="")
+    %meta(name="author" content="")
+
+    -# Standard viewport tag to set the viewport to the device's width,
+    -# Android 2.3 devices need this so 100% width works properly and
+    -# doesn't allow children to blow up the viewport width
+    %meta{content: "initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width", name: "viewport"}
+
+
+    -# Fix for iPhone 5 fullscreen web apps
+    %meta(name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)")
+    %meta(name='apple-mobile-web-app-capable' content='yes')
+    %meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+
+    -# App Icons
+    / %link(rel="shortcut icon" href="./images/favicon.ico")
+    / %link(rel="apple-touch-icon-precomposed" href="./images/apple-touch-icon-precomposed.png")
+    / %link(rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/apple-touch-icon-57x57-precomposed.png")
+    / %link(rel="apple-touch-icon-precomposed" sizes="72x72" href="./images/apple-touch-icon-72x72-precomposed.png")
+    / %link(rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/apple-touch-icon-114x114-precomposed.png")
+    %link(rel="shortcut icon" href="./images/favicons/favicon.ico")
+    %link(rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-touch-icon-57x57.png")
+    %link(rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-touch-icon-114x114.png")
+    %link(rel="apple-touch-icon" sizes="72x72" href="./images/favicons/apple-touch-icon-72x72.png")
+    %link(rel="apple-touch-icon" sizes="144x144" href="./images/favicons/apple-touch-icon-144x144.png")
+    %link(rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-touch-icon-60x60.png")
+    %link(rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-touch-icon-120x120.png")
+    %link(rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-touch-icon-76x76.png")
+    %link(rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-touch-icon-152x152.png")
+    %link(rel="icon" type="image/png" href="./images/favicons/favicon-196x196.png" sizes="196x196")
+    %link(rel="icon" type="image/png" href="./images/favicons/favicon-160x160.png" sizes="160x160")
+    %link(rel="icon" type="image/png" href="./images/favicons/favicon-96x96.png" sizes="96x96")
+    %link(rel="icon" type="image/png" href="./images/favicons/favicon-16x16.png" sizes="16x16")
+    %link(rel="icon" type="image/png" href="./images/favicons/favicon-32x32.png" sizes="32x32")
+    %meta(name="msapplication-TileColor" content="#da532c")
+    %meta(name="msapplication-TileImage" content="./images/favicons/mstile-144x144.png")
+    %meta(name="msapplication-config" content="./images/favicons/browserconfig.xml")
+
+
+    / Stylesheets
+    = stylesheet_link_tag 'custom'
+  %body{class: current_page.data.body_class || 'page'}
+    = yield
+

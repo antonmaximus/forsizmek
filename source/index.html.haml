@@ -1,0 +1,66 @@
+---
+title: Anton
+body_class: index
+---
+
+.intro
+  %p Below are four Carousel objects created from the same Carousel class.  Basic features are as follows:
+  %ul 
+    %li Viewing size is 400x300 pixels
+    %li Navigation arrows appear at side edges on hover
+    %li Download is on lower-right corner
+    %li Pause/unpause on middle hover
+    %li Fetches JSON via AJAX
+    %li Wraps around
+    %li Auto-sliding direction follows the last navigation arrow pressed (i.e., if you pressed the left arrow, the carousel will auto-slide towards the left.)
+    %li Default transition time for auto-slide is 1800ms
+
+#carouselA
+%p 
+  %b Default Carousel
+  %br
+  This carousel uses all basic features mentioned.
+
+
+#carouselB
+%p 
+  %b Support for User-configured Options 
+  %br
+  User-configured options show above are: viewing size (600x200), Background-color (black), &  Transition time (3000ms).
+
+#carouselC
+%p 
+  %b Support for all Image Sizes and a Portrait Viewport.
+  %br
+  Images above have different extreme sizes. Viewing size is 300x500. Background-color is green.
+
+
+#carouselD
+%p 
+  %b Support for Flickr API using JSONP
+  %br
+  Flickr API was used with the keyword 'dog' to fetch the images, and the data was in JSONP instead of JSON.
+
+
+/ scripts
+= javascript_include_tag "helperFunctions.js"
+= javascript_include_tag "helperFunctionsFlickr.js"
+= javascript_include_tag "controllers.js"
+= javascript_include_tag "models.js"
+
+
+/ FONTAWESOME CSS Fallback
+:javascript
+  var carousel = new CAROUSEL.Carousel({ divId: 'carouselA', jsonPath: './javascripts/jsonImages.json'});
+
+  var inputTwo = { divId: 'carouselB', jsonPath: './javascripts/jsonImages.json', 
+    tranTime: 3000, width: 600, height: 200, backgroundColor: 'black'}
+  var carouselTwo = new CAROUSEL.Carousel(inputTwo);
+
+
+  var inputC = { divId: 'carouselC', jsonPath: './javascripts/jsonImagesLettered.json', 
+     width: 300, height: 500, backgroundColor: 'green'}
+  var carouselC = new CAROUSEL.Carousel(inputC);
+
+  var inputD = { divId: 'carouselD', flickrTag: 'dog', backgroundColor: 'rgba(0, 100, 200, 0.25)'}
+  var carouselD = new CAROUSEL.Carousel(inputD);

@@ -1,0 +1,25 @@
+{
+    "items": [
+        {
+            "path": "../images/image1.jpg",
+            "title": "image 1"
+        },
+        {
+            "path": "../images/image2.jpg",
+            "title": "image 2"
+        },
+        {
+            "path": "../images/image3.jpg",
+            "title": "image 3"
+        },
+        {
+            "path": "../images/image4.jpg",
+            "title": "image 4"
+        },
+        {
+            "path": "../images/image5.jpg",
+            "title": "image 5"
+        }
+
+    ]
+}

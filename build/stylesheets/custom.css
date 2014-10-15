@@ -1,0 +1,210 @@
+/*------------------------------------*\
+    $IMPORTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+/*
+A more considered reset; more of a restart...
+*/
+/* line 19, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strong, sub, sup, tt, var,
+b, u, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+/* line 24, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 27, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 31, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+strong, b, mark {
+  font-weight: bold;
+  font-style: inherit; }
+
+/* line 35, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+em, i, cite, q, address, dfn, var {
+  font-style: italic;
+  font-weight: inherit; }
+
+/* line 39, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+abbr[title], dfn[title] {
+  cursor: help;
+  border-bottom: 1px dotted; }
+
+/* line 43, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+ins {
+  border-bottom: 1px solid; }
+
+/* line 46, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+a, u, ins {
+  text-decoration: none; }
+
+/* line 49, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+del, s {
+  text-decoration: line-through; }
+
+/* line 52, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+pre, code, samp, kbd {
+  font-family: monospace; }
+
+/* line 55, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+small {
+  font-size: 0.75em; }
+
+/* line 58, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+img {
+  border: none;
+  font-style: italic; }
+
+/* line 64, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/_reset.css */
+input,
+select, option, optgroup,
+textarea {
+  font: inherit; }
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* line 12, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+body {
+  background-color: #FFF;
+  color: black;
+  text-align: center; }
+  /* line 17, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  body a:focus {
+    outline: none; }
+
+/* line 22, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.carousel {
+  position: relative;
+  margin: 10px auto; }
+
+/* line 27, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.viewport {
+  overflow: hidden;
+  height: inherit;
+  width: inherit; }
+
+/* line 35, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.filmstrip {
+  -webkit-transition: all 1s;
+          transition: all 1s;
+  height: inherit;
+  margin-left: 0px; }
+  /* line 40, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .filmstrip li {
+    float: left;
+    list-style: none;
+    display: inline-block;
+    height: inherit; }
+  /* line 47, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .filmstrip img {
+    vertical-align: middle; }
+
+/* line 52, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.navigation {
+  position: absolute;
+  height: inherit;
+  width: inherit; }
+
+/* line 58, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.chevron {
+  position: absolute;
+  cursor: pointer;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-out;
+          transition: all 0.4s ease-out;
+  width: 20%; }
+  /* line 68, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .chevron:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 1; }
+
+/* line 76, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.leftChev {
+  background: url(../images/chevron-left-small.png) no-repeat center center;
+  left: 0px; }
+
+/* line 82, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.rightChev {
+  background: url(../images/chevron-right-small.png) no-repeat center center;
+  right: 0px; }
+
+/* line 88, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.download {
+  background: url(../images/download.png) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px 6px 3px;
+  border: 2px outset buttonface;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  opacity: 0.25;
+  -webkit-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+  cursor: pointer; }
+  /* line 105, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .download:hover {
+    opacity: 1; }
+
+/* line 111, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.pause {
+  background: url(../images/pause.png) no-repeat center center;
+  -webkit-background-size: 50% 50%;
+          background-size: 50%;
+  cursor: pointer;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease-out;
+          transition: opacity 0.5s ease-out; }
+  /* line 128, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .pause:hover, .pause:active {
+    opacity: 0.75; }
+
+/* line 133, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+p {
+  margin: 10px auto 50px;
+  max-width: 550px;
+  color: inherit; }
+
+/* line 140, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+.intro {
+  width: 650px;
+  margin: 0 auto 80px;
+  text-align: left; }
+  /* line 145, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .intro p {
+    margin-bottom: 10px;
+    max-width: 650px; }
+  /* line 150, /Users/aj/Documents/web/javascript/forSizmek/source/stylesheets/custom.css.scss */
+  .intro ul {
+    padding-left: 40px; }
